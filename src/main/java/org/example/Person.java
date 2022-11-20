@@ -5,8 +5,8 @@ import java.util.OptionalInt;
 public class Person {
     protected final String name;
     protected final String surname;
-    protected Integer age; //не final т.к. может меняться
-    protected String address; //не final т.к. может меняться
+    private Integer age;
+    private String address;
 
     public Person(String name, String surname) {
         this.name = name;
