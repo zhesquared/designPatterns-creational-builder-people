@@ -19,6 +19,13 @@ public class Person {
         this.age = age;
     }
 
+    public Person(String name, String surname, int age, String address) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.address = address;
+    }
+
     public boolean hasAge() {
         return age != null;
     }
@@ -35,9 +42,11 @@ public class Person {
         return surname;
     }
 
-    public void setAge(int age) {
+    public void setAgeIfAbsent(int age) throws Exception {
         if (!hasAge()) {
             this.age = age;
+        } else {
+            throw new Exception("You cannot specify the age of the person who has it set");
         }
     }
 

@@ -46,6 +46,6 @@ public class PersonBuilder {
         if (surname == null) {
             throw new IllegalStateException("Field \"Surname\" is empty.");
         }
-        return new Person(name, surname, age);
+        return new Person(name, surname, age, address);
     }
 }
